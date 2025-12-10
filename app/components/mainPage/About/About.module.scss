@@ -1,0 +1,27 @@
+
+.aboutContentGrid{
+    height: 350px;
+    display: flex;
+    gap: 3%;
+    flex-direction: row;
+
+    .side{
+        height: fit-content;
+        max-width: 46.7%;
+
+        &__right{
+            margin: auto;
+            p{
+                font-weight: 700;
+            }
+        }
+    }
+
+    .line {
+        
+        height: 100%; 
+        width: 3px; 
+        background: var(--text-color);
+        border-radius: 2px;
+    } 
+}

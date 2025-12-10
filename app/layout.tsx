@@ -1,15 +1,20 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Wix_Madefor_Display, M_PLUS_1p } from "next/font/google";
 import "./globals.css";
+import Header from "./components/layout/Header/Header";
+import Footer from "./components/layout/Footer/Footer";
 
-const geistSans = Geist({
+const geistSans = Wix_Madefor_Display({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const mPlus1p = M_PLUS_1p({
+  variable: "--font-m-plus-1p",
+  subsets: ["latin", "latin-ext", "cyrillic", "cyrillic-ext"],
+  weight: ["100", "300", "400", "500", "700", "800", "900"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -24,10 +29,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${mPlus1p.variable} antialiased`}>
+        <Header/>
         {children}
+        <Footer/>
       </body>
     </html>
   );

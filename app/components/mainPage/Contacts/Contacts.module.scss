@@ -1,0 +1,57 @@
+
+.contactsContentGrid{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+
+    .side{
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        width: calc(50% - 20px);
+
+        h2{
+            font-size: 60px;
+            font-weight: 500;
+            margin-bottom: 40px;
+        }
+
+        .socials{
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+            transition: all 0.3s ease;
+            &:hover {
+            transform: scale(1.03); 
+            }
+            &:active {
+                transform: scale(0.98); 
+            }
+
+            .socialTitle{
+                min-width: 20%;
+                color: var(--second-background);
+            }
+
+            .links{
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+                transition: all 0.3s ease;
+
+                .icon{
+                    transition: all 0.3s ease;
+                    
+                    &:hover {
+                    transform: scale(1.05); 
+                    }
+                    &:active {
+                        transform: scale(0.98); 
+                    }
+                }
+                
+                
+            }
+        }
+    }
+}
