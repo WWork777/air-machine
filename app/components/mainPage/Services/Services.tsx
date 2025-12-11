@@ -28,7 +28,7 @@ export default function Services(){
                 <a href="#" className={styles.small}>
                     <h3 className={styles.title}>Услуга 3</h3>
                 </a>
-                <a href="#" className={styles.small}>
+                <a href="#" className={`${styles.small} ${styles.item4}`}>
                     <h3 className={styles.title}>Услуга 4</h3>
                 </a>
             </div>
