@@ -20,6 +20,10 @@ body {
   color: var(--text-color);
   font-family: var(--font-family);
   font-size: 20px;
+
+  @media (max-width: 992px){
+    font-size: 18px !important;
+  }
 }
 
 footer{
@@ -58,8 +62,11 @@ h1{
     font-size: 45px;
   }
 
-   @media (max-width:830px) {
+  @media (max-width:830px) {
     font-size: 37px;
+  }
+  @media (max-width:400px) {
+    font-size: 32px;
   }
 }
 
@@ -70,6 +77,9 @@ h1{
 
   @media (max-width:1030px) {
     font-size: 28px;
+  }
+  @media (max-width:500px) {
+    font-size: 26px;
   }
 }
 
@@ -88,11 +98,19 @@ h3{
   font-size: 32px ;
   font-weight: 600;
 
+  @media (max-width:992px) {
+    font-size: 24px;
+  }
+
 }
 
 h4{
   font-size: 28px ;
   font-weight: 500;
+
+  @media (max-width:992px) {
+    font-size: 24px;
+  }
 
 }
 
@@ -100,4 +118,8 @@ p{
   font-size: 20px;
   font-weight: 400;
   margin-bottom: 20px;
+
+  @media (max-width: 992px){
+    font-size: 18px;
+  }
 }

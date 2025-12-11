@@ -4,6 +4,13 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function Contacts(){
+
+    const email = process.env.NEXT_PUBLIC_CONTACT_EMAIL;
+    const phone = process.env.NEXT_PUBLIC_CONTACT_PHONE;
+    const address = process.env.NEXT_PUBLIC_CONTACT_ADDRESS;
+    const addressLink = process.env.NEXT_PUBLIC_CONTACT_ADDRESS_LINK;
+    const addressBuilder = process.env.NEXT_PUBLIC_CONTACT_ADDRESS_BUILDER;
+
     return(
         <section className="container" id="contacts">
             
@@ -11,13 +18,17 @@ export default function Contacts(){
             <div className={styles.contactsContentGrid}>
                 <div className={styles.side}>
                     <h2>Контакты</h2>
-                    <a href="#" className={styles.socials}>
+                    <a href={addressLink} className={styles.socials}>
                       <p className={styles.socialTitle}>Адрес</p>
-                      <p>г. Кемерово, бульвар Солнечный, 8</p>
+                      <p>{address}</p>
                     </a>
-                    <a href="#" className={styles.socials}>
+                    <a href={`tel:${phone}`} className={styles.socials}>
                       <p className={styles.socialTitle}>Телефон</p>
-                      <p>+7 905 965-03-90</p>
+                      <p>{phone}</p>
+                    </a>
+                    <a href={`mailto:${email}`} className={styles.socials}>
+                      <p className={styles.socialTitle}>Email</p>
+                      <p>{email}</p>
                     </a>
                     <div className={styles.socials}>
                       <p className={styles.socialTitle}>Соцсети</p>
@@ -44,16 +55,16 @@ export default function Contacts(){
                       </div>
                     </div>
                 </div>
+
+
             
             <div className={styles.side}>
 
                 <div className={styles.map}>
-                    <iframe
-                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A335208877bc6b471f169a3e74947880e08008dc840ffd1cb19b2361acb4aa5b2&amp;source=constructor"
-                    width="500"
-                    height="400"
-                    frameBorder="0"
-                    ></iframe>
+                    <iframe src={addressBuilder} 
+                    width="500" 
+                    height="400">
+                   </iframe>
                 </div>
 
             </div > 

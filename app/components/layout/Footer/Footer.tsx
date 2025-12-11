@@ -3,6 +3,12 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function Footer(){
+
+    const email = process.env.NEXT_PUBLIC_CONTACT_EMAIL;
+    const phone = process.env.NEXT_PUBLIC_CONTACT_PHONE;
+    const address = process.env.NEXT_PUBLIC_CONTACT_ADDRESS;
+    const addressLink = process.env.NEXT_PUBLIC_CONTACT_ADDRESS_LINK;
+
     return(
         <footer>
             <div className={styles.footer}>
@@ -28,36 +34,36 @@ export default function Footer(){
                     <h4>Контакты</h4>
                     <ul>
                         <li>
-                            <a className={styles.footerContacts} href="#">
+                            <a className={styles.footerContacts} href={addressLink}>
                                 <Image 
                                 src="/svg/mapPoint.svg"
                                 alt="Адрес"
                                 width={25}
                                 height={25}
                                 />
-                                г. Кемерово, бульвар Солнечный, 8
+                                {address}
                             </a>
                         </li>
                         <li>
-                            <a className={styles.footerContacts} href="#">
+                            <a className={styles.footerContacts} href={`tel:${phone}`}>
                                 <Image 
                                 src="/svg/phone.svg"
                                 alt="Адрес"
                                 width={25}
                                 height={25}
                                 />
-                                +7 905 965-03-90
+                                {phone}
                             </a>
                         </li>
                         <li>
-                            <a className={styles.footerContacts} href="#">
+                            <a className={styles.footerContacts} href={`mailto:${email}`}>
                                 <Image 
                                 src="/svg/mail.svg"
                                 alt="Адрес"
                                 width={25}
                                 height={25}
                                 />
-                                zakharovks@mail.ru
+                                {email}
                             </a>
                         </li>
 

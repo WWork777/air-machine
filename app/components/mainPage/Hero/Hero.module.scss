@@ -71,6 +71,10 @@
             &:active {
                 transform: scale(0.98); 
             }
+
+            @media (max-width:500px) {
+                width: 250px;
+            }
         }
 
         .featuresList {

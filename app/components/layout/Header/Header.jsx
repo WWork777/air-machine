@@ -5,6 +5,7 @@ import Image from "next/image";
 import styles from "./Header.module.scss";
 
 export default function Header() {
+  const phone = process.env.NEXT_PUBLIC_CONTACT_PHONE;
   const [modalOpen, setModalOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,6 +34,7 @@ export default function Header() {
       document.body.style.overflow = "";
     };
   }, [menuOpen]);
+  
 
   return (
     <header className={`${styles.header} ${ isScrolled && !menuOpen ? styles.scrolled : ""}`}>
@@ -60,8 +62,8 @@ export default function Header() {
           {/* Контакты и кнопка */}
           <div className={styles.actions}>
             <div className={styles.contacts}>
-              <a href="tel:+7 902 983 0005" className={styles.phone}>
-                +7 905 965-03-90
+              <a href={`tel:${phone}`} className={styles.phone}>
+                {phone}
               </a>
               <div className={styles.socials}>
                 <Link href="https://m.vk.com/tridsat_dva" target="_blank">
@@ -131,8 +133,8 @@ export default function Header() {
             </Link>
           </nav>
           <div className={styles.mobileContacts}>
-            <Link href="tel:+7 902 983 0005">
-              <span>+7 902 983 0005</span>
+            <Link href={`tel:${phone}`}>
+              <span>{phone}</span>
             </Link>
             <div className={styles.socials}>
               <Link href="https://m.vk.com/tridsat_dva" target="_blank">
