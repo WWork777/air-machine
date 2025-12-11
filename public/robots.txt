@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Host: https://air-machine.ru
+Sitemap: https://air-machine.ru/sitemap.xml
