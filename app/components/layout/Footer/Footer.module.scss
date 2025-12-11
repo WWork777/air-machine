@@ -4,7 +4,6 @@
     margin: auto;
     height: fit-content;
     
-    /* Grid с auto-fit для идеально равномерного распределения */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 40px;
@@ -20,7 +19,6 @@
         gap: 40px;
         width: 100%;
         
-        /* Все секции автоматически получают равную ширину */
         
         &__contacts {
             /* Контакты могут занимать больше места при необходимости */
