@@ -198,11 +198,13 @@
   gap: 4px;
   background: none;
   border: none;
+  padding: 5px;
+  margin-right: 5px;
   cursor: pointer;
 
   span {
     width: 24px;
-    height: 2px;
+    height: 3px;
     background: #000; /* Белый цвет когда хедер прозрачный */
     transition: background 0.3s ease-in-out;
     z-index: 1002;
