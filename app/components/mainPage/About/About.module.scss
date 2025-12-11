@@ -24,4 +24,27 @@
         background: var(--text-color);
         border-radius: 2px;
     } 
+
+    @media (max-width:992) {
+        flex-direction: column;
+        height: 530px;
+
+        p{
+            margin: 20px 0;
+        }
+
+        .side{
+            max-width: 100%;
+        }
+        .line {
+            height: 3px; 
+            width: 80%; 
+            background: var(--text-color);
+            border-radius: 2px;
+        } 
+    }
+
+    @media (max-width: 750px) {
+        height: fit-content;
+    }
 }

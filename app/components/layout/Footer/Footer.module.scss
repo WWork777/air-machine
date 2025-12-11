@@ -1,80 +1,109 @@
-
-
-.footer{
+.footer {
     padding: 100px 0;
     max-width: 1500px;
     margin: auto;
     height: fit-content;
-
-    display: flex;
-    flex-direction: row;
-    gap: 5%;
-
+    
+    /* Grid с auto-fit для идеально равномерного распределения */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    align-items: start;
+    
     @media (max-width: 1530px) {
         padding: 100px 2.5%;
     }
     
-    .section{
-        width: 15%;
+    .section {
         display: flex;
         flex-direction: column;
-        gap:40px;
-
-        &__contacts{
-            width: 30%;
+        gap: 40px;
+        width: 100%;
+        
+        /* Все секции автоматически получают равную ширину */
+        
+        &__contacts {
+            /* Контакты могут занимать больше места при необходимости */
+            grid-column: span 2;
+            
+            @media (max-width: 768px) {
+                grid-column: span 1;
+            }
         }
-
-        &__links{
+        
+        &__links {
+            margin-top: auto;
+            display: flex;
             justify-content: flex-end;
             align-items: flex-end;
+            text-align: right;
 
-            .links{
+            @media (max-width: 1215px) {
+                align-items: flex-start;
+            }
+            
+            .links {
                 display: flex;
                 flex-direction: row;
                 gap: 20px;
                 transition: all 0.3s ease;
-
-                .icon{
+                justify-content: flex-end;
+                
+                .icon {
                     transition: all 0.3s ease;
                     
                     &:hover {
-                    transform: scale(1.07); 
+                        transform: scale(1.07);
                     }
+                    
                     &:active {
-                        transform: scale(0.98); 
+                        transform: scale(0.98);
                     }
                 }
+            }
+            
+            @media (max-width: 768px) {
+                align-items: flex-start;
+                text-align: left;
                 
-                
+                .links {
+                    justify-content: flex-start;
+                }
             }
         }
-
-
-
-        ul{
+        
+        ul {
             list-style: none;
-
-            li{
+            
+            li {
                 transition: all 0.3s ease;
                 margin-bottom: 20px;
+                
                 &:hover {
-                    transform: scale(1.05); 
-                    opacity: 0.95; 
+                    transform: scale(1.05);
+                    opacity: 0.95;
                 }
                 
                 &:active {
-                    transform: scale(0.98); 
+                    transform: scale(0.98);
                 }
-
-                .footerContacts{
+                
+                .footerContacts {
                     display: flex;
                     flex-direction: row;
                     gap: 20px;
                 }
             }
         }
-
-        
     }
     
+    @media (max-width: 1230px) {
+        grid-template-columns: 1fr 1fr;
+        .section__contacts{grid-column: span 1;}
+    }
+    
+    @media (max-width: 576px) {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
 }

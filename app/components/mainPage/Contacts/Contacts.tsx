@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Contacts(){
     return(
-        <section className="container">
+        <section className="container" id="contacts">
             
 
             <div className={styles.contactsContentGrid}>

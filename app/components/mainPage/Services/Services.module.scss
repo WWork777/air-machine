@@ -27,23 +27,24 @@
 
         .big{
             background: url("/images/Services/1.png");
-                background-size: cover;
-                border-radius: 18px;
-                display: flex;
-                justify-content: flex-end;
-                align-items: flex-end; 
-                padding: 10px 20px ;
-                transition: all 0.3s ease;
+            background-position: center;
+            background-size: cover;
+            border-radius: 18px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end; 
+            padding: 10px 20px ;
+            transition: all 0.3s ease;
 
-                &:hover {
-                    transform: scale(1.015); 
-                    // opacity: 0.95; 
-                }
-                
-                &:active {
-                    transform: scale(0.98); 
-                }
+            &:hover {
+                transform: scale(1.015); 
+                // opacity: 0.95; 
             }
+            
+            &:active {
+                transform: scale(0.98); 
+            }
+        }
 
 
         @media (max-width:1300px) {
@@ -68,12 +69,12 @@
         justify-content: flex-start;
         align-items: flex-end;
         padding: 10px 20px;
-        background: var(--card-back);
         border-radius: 18px;
         transition: all 0.3s ease;
-        &:nth-child(1){background: url("/images/Services/2.png");}
-        &:nth-child(2){background: url("/images/Services/2.png");}
-        &:nth-child(3){background: url("/images/Services/2.png");}
+        &:nth-child(1){background: url("/images/Services/2.png");background-position: center;}
+        &:nth-child(2){background: url("/images/Services/2.png");background-position: center;}
+        &:nth-child(3){background: url("/images/Services/2.png");background-position: center;}
+        background-position: center;
 
         &:hover {
             transform: scale(1.03); 

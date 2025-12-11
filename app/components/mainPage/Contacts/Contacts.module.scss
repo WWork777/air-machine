@@ -54,4 +54,11 @@
             }
         }
     }
+
+    @media (max-width: 800px) {
+        flex-direction: column;
+        .side{
+            width: 100%;
+        }
+    }
 }

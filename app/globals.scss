@@ -35,6 +35,9 @@ footer{
   @media (max-width:1530px) {
     padding: 0 2.5%; 
   }
+  @media (max-width: 1230px){
+    margin: 50px auto;
+  }
 }
 
 
@@ -50,12 +53,24 @@ h1{
   @media (max-width:1230px) {
     font-size: 55px;
   }
+
+  @media (max-width:1030px) {
+    font-size: 45px;
+  }
+
+   @media (max-width:830px) {
+    font-size: 37px;
+  }
 }
 
 .subTitle{
   font-size: 35px;
   font-weight: 400;
   flex-grow: 1;
+
+  @media (max-width:1030px) {
+    font-size: 28px;
+  }
 }
 
 h2{

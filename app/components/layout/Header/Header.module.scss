@@ -35,8 +35,9 @@
   margin-top: 50px;
   width: 80%;
   height: auto;
-  margin-left: auto;
-  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
   @media (max-width: 389px) {
     margin-top: 20px;
   }
