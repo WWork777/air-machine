@@ -2,6 +2,7 @@ import Hero from "./components/mainPage/Hero/Hero";
 import About from "./components/mainPage/About/About";
 import Products from "./components/mainPage/Products/Products";
 import Services from "./components/mainPage/Services/Services";
+import Gallery from "./components/mainPage/Gallery/Gallery"; // Added Gallery import
 import Contacts from "./components/mainPage/Contacts/Contacts";
 import type { Metadata } from "next";
 
@@ -27,11 +28,11 @@ export const metadata: Metadata = {
     title: "Air-Machine — Производство промышленных БПЛА в России",
     description:
       "Современные беспилотные решения для бизнеса и государства. Полный цикл: от проектирования до сервисного обслуживания.",
-    url: `${canonical}`,
+    url: canonical,
     siteName: "Air-Machine",
     images: [
       {
-        url: `${canonical}/images/hero.png`, // Рекомендуется разместить качественное фото вашего дрона/производства
+        url: `${canonical}/images/hero.png`,
         width: 1200,
         height: 630,
         alt: "Air-Machine — промышленный БПЛА",
@@ -41,13 +42,13 @@ export const metadata: Metadata = {
     type: "website",
   },
   alternates: {
-    canonical: `${canonical}`,
+    canonical: canonical,
   },
   robots: {
     index: true,
     follow: true,
   }
-};
+}
 
 export default function Home() {
   return (
@@ -56,6 +57,7 @@ export default function Home() {
       <About/>
       <Products/>
       <Services/>
+      <Gallery/> {/* Added Gallery component */}
       <Contacts/>
     </>
   );

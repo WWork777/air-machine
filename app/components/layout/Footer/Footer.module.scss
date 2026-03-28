@@ -30,10 +30,9 @@
         }
         
         &__links {
-            margin-top: auto;
+            height: 100%;
             display: flex;
-            justify-content: flex-end;
-            align-items: flex-end;
+            justify-content: space-between;
             text-align: right;
 
             @media (max-width: 1215px) {
@@ -104,4 +103,43 @@
         grid-template-columns: 1fr;
         gap: 30px;
     }
+}
+
+
+.logos{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  img {
+    height: auto;
+    max-height: 90px;
+  }
+
+  .logoText{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+
+    span{
+      color: #447572;
+      line-height: 1 !important;
+      // &:nth-child(1){
+        font-weight: 800;
+      // }
+    }
+  }
+
+
+  @media (max-width: 768px) {
+    img {
+      max-height: 70px !important;
+      max-width: 70px !important;
+    }
+  }
 }

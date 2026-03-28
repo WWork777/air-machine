@@ -17,20 +17,20 @@ export default function Services(){
                     </p>
                 </div>
                 <a href="#" className={styles.big}>
-                    <h3 className={styles.serviceTitle}>Услуга 1</h3>
+                    <h3 className={styles.serviceTitle}>Разработка коптеров</h3>
                 </a>
             </div>
 
             <div className={styles.ServicesBottomGrid}>
                 <a href="#" className={styles.small}>
-                    <h3 className={styles.title}>Услуга 2</h3>
+                    <h3 className={styles.title}>Разработка зап.частей</h3>
                 </a>
                 <a href="#" className={styles.small}>
-                    <h3 className={styles.title}>Услуга 3</h3>
+                    <h3 className={styles.title}>Разработка крыльев</h3>
                 </a>
-                <a href="#" className={`${styles.small} ${styles.item4}`}>
+                {/* <a href="#" className={`${styles.small} ${styles.item4}`}>
                     <h3 className={styles.title}>Услуга 4</h3>
-                </a>
+                </a> */}
             </div>
 
 

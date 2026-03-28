@@ -71,6 +71,30 @@ export default function Footer(){
                 </div>
 
                 <div className={`${styles.section} ${styles.section__links}`}>
+                    <div className={styles.logos}>
+                        <Link href="/" className={styles.logo}>
+                            <Image
+                            src="/svg/logo.svg"
+                            alt="Логотип"
+                            width={90}
+                            height={90}
+                            priority
+                            />
+                            <div className={styles.logoText}>
+                            <span className="subTitle">АВИА</span>
+                            <span className="subTitle">Машина</span>
+                            </div>
+                        </Link>
+                        <Link href="https://sk.ru/" target="_blank" >
+                            <Image
+                            src="/svg/skolkovo.svg"
+                            alt="Логотип"
+                            width={230}
+                            height={90}
+                            priority
+                            />
+                        </Link>
+                    </div>
                     <div className={styles.links}>
                         <Link href="https://m.vk.com/tridsat_dva" target="_blank">
                             <Image

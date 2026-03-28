@@ -45,10 +45,14 @@ export default function Header() {
             <Image
               src="/svg/logo.svg"
               alt="Логотип"
-              width={220}
-              height={60}
+              width={90}
+              height={90}
               priority
             />
+            <div className={styles.logoText}>
+              <span className="subTitle">АВИА</span>
+              <span className="subTitle">Машина</span>
+            </div>
           </Link>
 
           {/* Навигация desktop */}

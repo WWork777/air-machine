@@ -1,0 +1,116 @@
+.header {
+  margin-bottom: 60px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  margin-bottom: 80px;
+
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.specRow {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 20px;
+  
+  .label {
+    font-size: 16px;
+    color: var(--text-color);
+    font-family: var(--font-geist-sans);
+    white-space: nowrap;
+  }
+  
+  .dotLine {
+    flex-grow: 1;
+    border-bottom: 1px dashed black;
+    border-radius: 99px;
+    margin: 0 10px;
+  }
+  
+  .value {
+    font-weight: 600;
+    font-size: 16px;
+    color: #000;
+  }
+}
+
+.advItem {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  
+  .check {
+    color: #1e7823; // Глубокий зеленый, выглядит дороже яркого
+    font-weight: bold;
+  }
+  
+  p {
+    margin: 0;
+    line-height: 1.5;
+    color: var(--text-color);
+    font-family: var(--font-geist-sans);
+  }
+}
+
+.productionBox {
+  margin-top: 40px;
+  padding: 30px;
+  background: #f9f9f9;
+  display: flex;
+  gap: 40px;
+  border-left: 4px solid #1a1a1a;
+
+  .prodItem {
+    display: flex;
+    flex-direction: column;
+    span {
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #888;
+    }
+    strong {
+      font-size: 20px;
+      color: #000;
+    }
+  }
+}
+
+/* Стили таблицы */
+.tableWrapper {
+  margin-top: 60px;
+  h3 { margin-bottom: 30px; font-size: 24px; }
+}
+
+.compareTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  
+  th {
+    padding: 15px;
+    border-bottom: 2px solid #eee;
+    color: #888;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  td {
+    padding: 20px 15px;
+    border-bottom: 1px solid #eee;
+    font-size: 15px;
+  }
+  
+  .activeRow {
+    background-color: #f0f4f8;
+    td:first-child {
+      font-weight: 700;
+      color: #0056b3;
+    }
+  }
+}

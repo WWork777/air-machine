@@ -1,3 +1,4 @@
+'use client'
 import styles from "./Hero.module.scss"
 
 export default function Hero(){
@@ -7,9 +8,14 @@ export default function Hero(){
                     <div className={`${styles.side} ${styles.side__left}`}>
                         <h1>Производство беспилотников</h1>
                         <div className={styles.line}></div>
-                        <p className="subTitle">Проектируем, разрабатываем беспилотные авиационные комплексы</p>
+                        <p className="subTitle">
+                            Проектируем, разрабатываем беспилотные авиационные комплексы<br />
+                            Действующие резиденты Сколково
+                        </p>
 
-                        <button className={styles.orderButton }>Заказать</button>
+                        <button className={styles.orderButton} onClick={() => window.location.href = 'tel:+79059650390'}>
+                            Заказать
+                        </button>
                     </div>
                     <div className={styles.side}>
                         <ul className={styles.featuresList}>
