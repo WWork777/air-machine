@@ -2,7 +2,7 @@ import styles from "./Characteristics.module.scss";
 
 export default function Characteristics() {
   const specs = [
-    { label: "Скорость (макс/сваливания/крейсерская)", value: "160 / 30 / 50 км/ч" },
+    { label: "Скорость (макс / сваливания / крейсерская)", value: "160 / 30 / 50 км/ч" },
     { label: "Макс. высота полета", value: "2,5 км" },
     { label: "Размах крыла", value: "1,5 м" },
     { label: "Дальность полета", value: "до 50 км" },

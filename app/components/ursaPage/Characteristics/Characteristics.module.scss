@@ -16,27 +16,44 @@
 
 .specRow {
   display: flex;
-  align-items: baseline;
-  margin-bottom: 20px;
+  /* Прижимаем линию к последней строке текста, если он перенесется */
+  align-items: flex-end; 
+  margin-bottom: 18px;
+  width: 100%;
   
   .label {
     font-size: 16px;
     color: var(--text-color);
     font-family: var(--font-geist-sans);
-    white-space: nowrap;
+    line-height: 1.3;
+    
+    /* Разрешаем перенос текста */
+    white-space: normal; 
+    word-wrap: break-word;
+    /* Позволяем блоку сжиматься, заставляя текст переноситься */
+    flex-shrink: 1; 
   }
   
   .dotLine {
+    /* Линия забирает всё свободное пространство */
     flex-grow: 1;
-    border-bottom: 1px dashed black;
-    border-radius: 99px;
-    margin: 0 10px;
+    /* Минимальный просвет, чтобы точки не исчезали совсем */
+    min-width: 15px; 
+    border-bottom: 1px dashed black; 
+    /* Небольшой отступ снизу, чтобы точки были на уровне шрифта, а не под ним */
+    margin: 0 10px 10px 10px; 
   }
   
   .value {
     font-weight: 600;
     font-size: 16px;
     color: #000;
+    text-align: right;
+    
+    /* Цифры и единицы измерения (км/ч) не должны переноситься */
+    white-space: nowrap; 
+    /* Запрещаем сжимать цифры, чтобы они не превращались в кашу */
+    flex-shrink: 0; 
   }
 }
 
@@ -46,8 +63,10 @@
   margin-bottom: 20px;
   
   .check {
-    color: #1e7823; // Глубокий зеленый, выглядит дороже яркого
+    color: #1e7823;
     font-weight: bold;
+    /* Чтобы галочка не сплющивалась, если текста в блоке много */
+    flex-shrink: 0; 
   }
   
   p {
@@ -66,6 +85,11 @@
   gap: 40px;
   border-left: 4px solid #1a1a1a;
 
+  @media (max-width: 480px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+
   .prodItem {
     display: flex;
     flex-direction: column;
@@ -73,10 +97,12 @@
       font-size: 12px;
       text-transform: uppercase;
       color: #888;
+      letter-spacing: 0.5px;
     }
     strong {
       font-size: 20px;
       color: #000;
+      margin-top: 4px;
     }
   }
 }
@@ -84,7 +110,10 @@
 /* Стили таблицы */
 .tableWrapper {
   margin-top: 60px;
-  h3 { margin-bottom: 30px; font-size: 24px; }
+  h3 { 
+    margin-bottom: 30px; 
+    font-size: 24px; 
+  }
 }
 
 .compareTable {
@@ -112,5 +141,10 @@
       font-weight: 700;
       color: #0056b3;
     }
+  }
+
+  @media (max-width: 600px) {
+    display: block;
+    overflow-x: auto; /* Добавляем прокрутку для маленьких экранов */
   }
 }
