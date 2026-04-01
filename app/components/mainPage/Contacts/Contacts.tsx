@@ -39,11 +39,11 @@ export default function Contacts() {
                   height={40}
                 />
               </Link> */}
-              <Link href="https://wa.me/79029830005" target="_blank">
+              <Link href="https://t.me/AVIAMASHINA" target="_blank">
                 <Image
                   className={styles.icon}
-                  src="/svg/wa.svg"
-                  alt="WhatsApp"
+                  src="/svg/tg.svg"
+                  alt="Telegram"
                   width={40}
                   height={40}
                 />
