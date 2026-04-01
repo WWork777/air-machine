@@ -34,10 +34,11 @@ export default function Header() {
       document.body.style.overflow = "";
     };
   }, [menuOpen]);
-  
 
   return (
-    <header className={`${styles.header} ${ isScrolled && !menuOpen ? styles.scrolled : ""}`}>
+    <header
+      className={`${styles.header} ${isScrolled && !menuOpen ? styles.scrolled : ""}`}
+    >
       {/* Остальной код без изменений */}
       <div>
         <div className={styles.inner}>
@@ -70,7 +71,7 @@ export default function Header() {
                 {phone}
               </a>
               <div className={styles.socials}>
-                <Link href="https://m.vk.com/tridsat_dva" target="_blank">
+                {/* <Link href="https://m.vk.com/tridsat_dva" target="_blank">
                   <Image
                     className={styles.icon}
                     src="/svg/vk.svg"
@@ -78,7 +79,7 @@ export default function Header() {
                     width={40}
                     height={40}
                   />
-                </Link>
+                </Link> */}
                 <Link href="https://wa.me/79029830005" target="_blank">
                   <Image
                     className={styles.icon}
